@@ -14,6 +14,16 @@ public class BookService implements Runnable{
     public BookService(int q){
         this.quantity= q;
     }
+
+    @Override
+    public void run() {
+        try {
+            createBook(quantity);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
     public void createBook(int quantity) throws InterruptedException{
         for(int i = 0; i < quantity; i++){
             books.add(new Book(IDGenerator.id(), BookNameGenerator.getName(),
@@ -27,19 +37,10 @@ public class BookService implements Runnable{
         return books.size();
     }
 
-
     public Book getBooksInStock(){
         return books.get(new Random().nextInt(books.size()));
     }
 
-    private Random random = new Random();
 
-    @Override
-    public void run() {
-        try {
-            createBook(quantity);
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
-    }
+    private Random random = new Random();
 }
