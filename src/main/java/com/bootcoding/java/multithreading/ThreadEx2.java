@@ -1,15 +1,12 @@
 package com.bootcoding.java.multithreading;
 
-import com.bootcoding.java.multithreading.mythread.AlphabetThread;
-import com.bootcoding.java.multithreading.mythread.NumberThread;
-import com.bootcoding.java.multithreading.mythread.SpecialSymbolThread;
+import com.bootcoding.java.multithreading.letters.AlphabetThread;
+import com.bootcoding.java.multithreading.letters.NumberThread;
+import com.bootcoding.java.multithreading.letters.SpecialSymbolThread;
 
 public class ThreadEx2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello");
-        System.out.println(Thread.currentThread().getName());
-        System.out.println(Thread.currentThread().getPriority());
 
         Thread t1 = new NumberThread();
         t1.start();

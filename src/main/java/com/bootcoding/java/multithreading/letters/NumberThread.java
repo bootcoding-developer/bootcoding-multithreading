@@ -1,4 +1,4 @@
-package com.bootcoding.java.multithreading.mythread;
+package com.bootcoding.java.multithreading.letters;
 
 public class NumberThread extends Thread{
 

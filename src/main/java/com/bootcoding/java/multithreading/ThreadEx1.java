@@ -1,6 +1,6 @@
 package com.bootcoding.java.multithreading;
 
-import com.bootcoding.java.multithreading.mythread.NumberThread;
+import com.bootcoding.java.multithreading.letters.NumberThread;
 
 public class ThreadEx1 {
 
